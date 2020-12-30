@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>입술 테스트</title>
+    <meta name="title" content="입술 테스트" />
+    <meta
+      name="subject"
+      content="입술 모양으로 알아 보는 인공지능 입술 테스트, 나의 입술 모양으로 알아보는 성격 유형 테스트! 지금 한번 해보세요!!"
+    />
+    <meta
+      name="keywords"
+      content="입술 테스트, 인공지능 입술 테스트, 입술모양, 입술 테스트, 입술, 입술 모양, 입술로 보는 심리, 입술 심리, 입술라인, Lipline, 입꼬리, 처진입꼬리, 하트입술, 앵두입술, 두툼한입술, 얇은입술, 입꼬리UP, 인공지능 심리테스트, AI 입술, AI 입술모양"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="" href="" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="입술 테스트" />
+    <meta
+      property="og:description"
+      content="입술 모양으로 알아보는 인공지능 성격 심리테스트, 입술 모양으로 나의 성격유형을 찾아보세요 ! 수만 개의 입술 사진 데이터로 학습한 인공지능이 당신의 성격 유형을 찾아드립니다.! 회원가입도 필요없이 화면에서 바로 확인해보세요! 사진 데이터는 그 어디에도 전송되지 않습니다. 인공지능이 보는 나의 입술모양 테스트 한번 해보세요! 처진 입꼬리? 올라간 입꼬리? 두툼한 입술? ? 동그란 입술모양? 얇은 입술? 산이뾰족한 입술모양? 입술모양 테스트를 통해 나의 성격 유형을 알 수 있습니다."
+    />
+    <meta property="og:image" content="" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light nav-margin">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">입술 테스트</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link disabled"
+                href="#"
+                tabindex="-1"
+                aria-disabled="true"
+                >Disabled</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="main-title">
+      <h1 class="title">인공지능 입술 테스트</h1>
+      <h2 class="subtitle">나의 입술 모양으로 알아 보는 성격 유형 테스트!</h2>
+      <h2 class="sr-only">
+        나는 어떤 입술 모양 일까? 나의 입술 모양으로 알아보는 성격 유형 테스트
+        해보세요!
+      </h2>
+      <h3 class="sr-only">
+        입술 모양 사진 데이터로 학습한 인공지능이 내 입술 모양과 비교하여 나의
+        성격 유형을 찾아드립니다.
+      </h3>
+      <h4 class="sr-only">
+        본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.
+      </h4>
+      <p>
+        입술 모양으로 알아보는 인공지능 성격 심리테스트, 입술 모양으로 나의
+        성격유형을 찾아보세요 ! 수만 개의 입술 사진 데이터로 학습한 인공지능이
+        당신의 성격 유형을 찾아드립니다.! 회원가입도 필요없이 화면에서 바로
+        확인해보세요! 사진 데이터는 그 어디에도 전송되지 않습니다. 인공지능이
+        보는 나의 입술모양 테스트 한번 해보세요! 처진 입꼬리? 올라간 입꼬리?
+        두툼한 입술? ? 동그란 입술모양? 얇은 입술? 산이뾰족한 입술모양? 입술모양
+        테스트를 통해 나의 성격 유형을 알 수 있습니다.
+      </p>
+    </div>
+    <div class=""></div>
+    <div class="file-upload container">
+      <div class="image-upload-wrap">
+        <input
+          class="file-upload-input"
+          type="file"
+          onchange="readURL(this);"
+          accept="image/*"
+        />
+        <div class="drag-text">
+          <img src="img/arrow-down-circle.svg" class="mt-5 pt-5 upload" />
+          <h3 class="upload-text">
+            얼굴 사진을 올려 놓거나 눌러서 업로드 해주세요!!
+          </h3>
+        </div>
+      </div>
+      <div class="file-upload-content">
+        <img
+          class="file-upload-image"
+          id="file-image"
+          src="#"
+          alt="your image"
+        />
+        <div id="loading" class="animated bounce">
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <p class="text-center">AI가 당신의 입술 모양을 분석중입니다.</p>
+        </div>
+        <p class="result-message"></p>
+        <div
+          id="label-container"
+          class="d-flex flex-column justify-content-around"
+        ></div>
+
+        <div class="image-title-wrap">
+          <button type="button" onclick="removeUpload()" class="remove-image">
+            <span class="image-title">다른 사진으로 재시도!</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="webcam-container"></div>
+
+    <script
+      class="jsbin"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+    ></script>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script>
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+
+          reader.onload = function (e) {
+            $(".image-upload-wrap").hide();
+
+            $(".file-upload-image").attr("src", e.target.result);
+            $(".file-upload-content").show();
+
+            $(".image-title").html(input.files[0].name);
+          };
+
+          reader.readAsDataURL(input.files[0]);
+          init().then(() => {
+            predict();
+          });
+        } else {
+          removeUpload();
+        }
+      }
+
+      function removeUpload() {
+        $(".file-upload-input").replaceWith($(".file-upload-input").clone());
+        $(".file-upload-content").hide();
+        $(".image-upload-wrap").show();
+      }
+      $(".image-upload-wrap").bind("dragover", function () {
+        $(".image-upload-wrap").addClass("image-dropping");
+      });
+      $(".image-upload-wrap").bind("dragleave", function () {
+        $(".image-upload-wrap").removeClass("image-dropping");
+      });
+    </script>
+    <script type="text/javascript">
+      // More API functions here:
+      // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
+
+      // the link to your model provided by Teachable Machine export panel
+      const URL = "https://teachablemachine.withgoogle.com/models/utspOy_3A/";
+
+      let model, webcam, labelContainer, maxPredictions;
+
+      // Load the image model and setup the webcam
+      async function init() {
+        const modelURL = URL + "model.json";
+        const metadataURL = URL + "metadata.json";
+
+        // load the model and metadata
+        // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
+        // or files from your local hard drive
+        // Note: the pose library adds "tmImage" object to your window (window.tmImage)
+        model = await tmImage.load(modelURL, metadataURL);
+        maxPredictions = model.getTotalClasses();
+
+        // append elements to the DOM
+
+        labelContainer = document.getElementById("label-container");
+        for (let i = 0; i < maxPredictions; i++) {
+          // and class labels
+          labelContainer.appendChild(document.createElement("div"));
+        }
+      }
+      // run the webcam image through the image model
+      async function predict() {
+        // predict can take in an image, video or canvas html element
+        let image = document.getElementById("file-image");
+        const prediction = await model.predict(image, false);
+        prediction.sort(
+          (a, b) => parseFloat(b.probability) - parseFloat(a.probability)
+        );
+        console.log(prediction[0].className);
+        let resultMessege;
+        switch (prediction[0].className) {
+          case "up":
+            resultMessege = "입꼬리UP";
+            break;
+          case "down":
+            resultMessege = "입꼬리DOWN";
+            break;
+          case "mm":
+            resultMessege = "두툼한입술";
+            break;
+          case "kk":
+            resultMessege = "산이뾰족한";
+            break;
+          case "circle":
+            resultMessege = "동그란입술";
+            break;
+          default:
+            resultMessege = "알수없음";
+        }
+        $(".result-message").html(resultMessege);
+        for (let i = 0; i < maxPredictions; i++) {
+          const classPrediction =
+            prediction[i].className +
+            ": " +
+            prediction[i].probability.toFixed(2);
+          labelContainer.childNodes[i].innerHTML = classPrediction;
+        }
+      }
+    </script>
+  </body>
+  <!-- Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ -->
+</html>
