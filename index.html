@@ -45,22 +45,22 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-    <title>입술 테스트</title>
-    <meta name="title" content="입술 테스트" />
+    <title>AI인공지능 입술모양 심리테스트</title>
+    <meta name="title" content="AI인공지능 입술모양 심리테스트" />
     <meta
       name="subject"
       content="입술 모양으로 알아 보는 인공지능 입술 테스트, 나의 입술 모양으로 알아보는 성격 유형 테스트! 지금 한번 해보세요!!"
     />
     <meta
       name="keywords"
-      content="입술 테스트, 인공지능 입술 테스트, 입술모양, 입술 테스트, 입술, 입술 모양, 입술로 보는 심리, 입술 심리, 입술라인, Lipline, 입꼬리, 처진입꼬리, 하트입술, 앵두입술, 두툼한입술, 얇은입술, 입꼬리UP, 인공지능 심리테스트, AI 입술, AI 입술모양"
+      content="입술 테스트, 인공지능 입술 테스트, teachable machine, 입술모양, 입술 테스트, 입술, 입술 모양, 입술로 보는 심리, 입술 심리, 입술라인, Lipline, 입꼬리, 처진입꼬리, 하트입술, 앵두입술, 두툼한입술, 얇은입술, 입꼬리UP, 인공지능 심리테스트, AI 입술, AI 입술모양"
     />
     <meta name="author" content="AITest" />
     <link rel="stylesheet" href="style.css" />
     <link rel="canonical" href="https://ai-psytest.tk" />
     <meta property="og:url" content="https://ai-psytest.tk" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="입술 테스트" />
+    <meta property="og:title" content="AI가 입술 모양으로 말해주는 성격 유형테스트" />
     <meta
       property="og:description"
       content="입술 모양으로 알아보는 인공지능 성격 심리테스트, 입술 모양으로 나의 성격유형을 찾아보세요 ! 수만 개의 입술 사진 데이터로 학습한 인공지능이 당신의 성격 유형을 찾아드립니다.! 회원가입도 필요없이 화면에서 바로 확인해보세요! 사진 데이터는 그 어디에도 전송되지 않습니다. 인공지능이 보는 나의 입술모양 테스트 한번 해보세요! 처진 입꼬리? 올라간 입꼬리? 두툼한 입술? ? 동그란 입술모양? 얇은 입술? 산이뾰족한 입술모양? 입술모양 테스트를 통해 나의 성격 유형을 알 수 있습니다."
@@ -69,8 +69,8 @@
       property="og:image"
       content="https://live.lge.co.kr/wp-content/uploads/2020/06/AI%EC%9A%A9%EC%96%B4%EC%82%AC%EC%A0%84_00.jpg"
     />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image" />
+    <link rel="icon" href="/favicon.ico" type="image" />
   </head>
   <body>
     <div class="ad__upper">
@@ -102,7 +102,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light nav-margin">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">입술 테스트</a>
+        <a class="navbar-brand" href="#">입술 심리 테스트</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -155,7 +155,7 @@
       </select>
     </section>
     <script>
-      let ua = navigator.userAgent.toLowerCase();
+      var ua = navigator.userAgent.toLowerCase();
       function changeLanguage(lang) {
         if (
           (navigator.userAgent.indexOf("Mac OS") > 0 &&
@@ -165,10 +165,7 @@
         ) {
           if (ua.match("android") != null) {
             window.open(
-              "googlechrome://navigate?url=ai-psytest.tk/" +
-                lang.value +
-                "/index.html"
-            ); //android
+              "googlechrome://navigate?url=ai-psytest.tk/"+lang.value+"/index.html"); //android
           } else if (
             ua.indexOf("iphone") > -1 ||
             ua.indexOf("ipad") > -1 ||
