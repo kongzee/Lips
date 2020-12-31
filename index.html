@@ -70,17 +70,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-KZVMM5H"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <div class="ad-topbanner">
+    <div class="ad__upper">
       <ins
         class="kakao_ad_area"
         style="display: none"
@@ -93,7 +83,20 @@
         src="//t1.daumcdn.net/kas/static/ba.min.js"
         async
       ></script>
+      <div class="ad__upper__line"></div>
+      <div class="ad__upper__hide__btn">x</div>
     </div>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-KZVMM5H"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <nav class="navbar navbar-expand-lg navbar-light nav-margin">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">입술 테스트</a>
@@ -182,27 +185,9 @@
     </script>
     <div class="main-title">
       <h1 class="title">인공지능 입술 테스트</h1>
-      <h2 class="subtitle">나의 입술 모양으로 알아 보는 성격 유형 테스트!</h2>
-      <h2 class="sr-only">
-        나는 어떤 입술 모양 일까? 나의 입술 모양으로 알아보는 성격 유형 테스트
-        해보세요!
+      <h2 class="subtitle">
+        나의 입술 모양으로 알아 보는 <br />성격 유형 테스트!
       </h2>
-      <h3 class="sr-only">
-        입술 모양 사진 데이터로 학습한 인공지능이 내 입술 모양과 비교하여 나의
-        성격 유형을 찾아드립니다.
-      </h3>
-      <h4 class="sr-only">
-        본 서비스는 Google의 인공지능 teachable machine 2.0을 활용하였습니다.
-      </h4>
-      <p>
-        입술 모양으로 알아보는 인공지능 성격 심리테스트, 입술 모양으로 나의
-        성격유형을 찾아보세요 ! 수만 개의 입술 사진 데이터로 학습한 인공지능이
-        당신의 성격 유형을 찾아드립니다.! 회원가입도 필요없이 화면에서 바로
-        확인해보세요! 사진 데이터는 그 어디에도 전송되지 않습니다. 인공지능이
-        보는 나의 입술모양 테스트 한번 해보세요! 처진 입꼬리? 올라간 입꼬리?
-        두툼한 입술? ? 동그란 입술모양? 얇은 입술? 산이뾰족한 입술모양? 입술모양
-        테스트를 통해 나의 성격 유형을 알 수 있습니다.
-      </p>
     </div>
     <script
       class="jsbin"
@@ -217,7 +202,7 @@
           accept="image/*"
         />
         <div class="drag-text">
-          <img src="img/arrow-down-circle.svg" class="mt-5 pt-5 upload" />
+          <img src="img/arrow-down-circle.svg" class="upload" />
           <h3 class="upload-text">
             얼굴 사진을 올려 놓거나 눌러서 업로드 해주세요!!
           </h3>
@@ -243,18 +228,13 @@
         ></div>
 
         <div class="image-title-wrap">
-          <button
-            type="button p-2"
-            class="try-again-btn"
-            onclick="gaReload1();"
-            data-toggle="modal"
-            data-target="#adModal"
-          >
-            <span class="try-again-text">다른 사진으로 재시도!</span>
+          <button type="button p-2" class="try-again-btn" onclick="gaReload()">
+            <span class="try-again-text">다른 사진으로 재시도</span>
           </button>
         </div>
       </div>
     </div>
+    <h4 class="mt-1 text-center">*사진은 절대 어디에도 저장되지 않습니다*</h4>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
@@ -293,6 +273,26 @@
         <p>&copy; Hatez 2020.12.31 All Rights Reserved.</p>
       </div>
     </footer>
+
+    <script>
+      function gaReload() {
+        gtag("event", "다른 사진으로 재시도", {
+          event_category: "다른 사진으로 재시도",
+        });
+        window.location.reload();
+      }
+      function gaReload1() {
+        gtag("event", "다른 사진으로 재시도 1차", {
+          event_category: "다른 사진으로 재시도",
+        });
+      }
+      function gaReload2() {
+        gtag("event", "다른 사진으로 재시도 2차", {
+          event_category: "다른 사진으로 재시도",
+        });
+        window.location.reload();
+      }
+    </script>
 
     <script>
       function readURL(input) {
@@ -355,31 +355,42 @@
         prediction.sort(
           (a, b) => parseFloat(b.probability) - parseFloat(a.probability)
         );
-        let resultTitle, resultExplain;
+        let resultTitle, resultExplain, resultPs;
         switch (prediction[0].className) {
           case "up":
-            resultTitle = "입꼬리UP";
-            resultExplain = "설명";
+            resultTitle = "올라간 입꼬리 입술 모양";
+            resultExplain =
+              "올라간 입꼬리 입술 모양 언제나 미소 가득 긍정적이고 쾌활한 성격 입니다 미소 가득한 인상으로 대인관계가 매우 좋습니다 하지만 말이 지나칠정도로 많고 활동적이며 적극적 입니다 입에 발린 말을 정말 잘 하기도 해서 사기꾼 기질을 보이기도 합니다";
+            resultPs = "조금만 말을 줄이면 정말 매력적인 사람이 보일 것 입니다";
             break;
           case "down":
-            resultTitle = "입꼬리DOWN";
-            resultExplain = "설명";
+            resultTitle = "처진 입꼬리 입술 모양";
+            resultExplain =
+              "상처받는걸 다른 누구보다 받아들이기 힘들어합니다 겁이 많고 방어적인 성향이 강합니다 말수가 적고 부정적이며 상당히 소심하고 소극적인 사람입니다 여러 사람들과 관계를 맺기 보단 소수의 적은 사람들과 깊은 관계를 이어나갑니다 과묵과 우직함이 있어 다른 이들에게 신뢰가 가며 말과 행동이 진심으로 우러나오는 사람입니다";
+            resultPs = "천천히 다가와 주세요";
             break;
           case "mm":
-            resultTitle = "두툼한입술";
-            resultExplain = "설명";
+            resultTitle = "도톰 두툼한 입술 모양";
+            resultExplain =
+              "매사에 적극적인 타입 입니다 정이 깊고 타인에게 헌신하는 성격 입니다 사람을 이끄는 힘이 있고 리더쉽도 강하고 자존감도 높습니다  또한 야망을 갖고 있으며 꿈을 이루기 위해 어떤 시련도 다 이겨내는 강한 정신력을 가진 사람 입니다      하지만 자신의 꿈에 너무 몰입 하다 보니 다소 냉담하고 이기적으로 보이기도 합니다";
+            resultPs = "남들에 비해 식욕이 너무 왕성 합니다";
             break;
           case "kk":
-            resultTitle = "산이뾰족한";
-            resultExplain = "설명";
+            resultTitle = "뾰족 뾰족 입술 모양";
+            resultExplain =
+              "일을 척척 열심히 하는 엄청난 노력형 입니다 매우 솔직한 편이고 성격은 예민보스 입니다 직설적인 화법으로 대화를 이어나가지만 내면은 감성적이고 여린편이여서 남몰래 눈물을 흘립니다 눈물이 많고 상처도 쉽게 잘 받습니다";
+            resultPs = "알고 보면 따뜻한 인간 입니다";
             break;
           case "circle":
-            resultTitle = "동그란입술";
-            resultExplain = "설명";
+            resultTitle = "동그란 입술 모양";
+            resultExplain =
+              "배려심이 많고 남을 잘 도와주고 잘 들어주기도 합니다 그래서 주변에 사람들이 많습니다 자기주장이 뚜렷하며 고집이 쎈 성격이며 의견을 굽히지 않지만 신기하게 말은 잘 들어주는 편 입니다";
+            resultPs = "기가 쎄다 라는 말을 종종 듣곤 합니다";
             break;
           default:
             resultTitle = "알수없음";
             resultExplain = "설명";
+            resultPs = "";
         }
         $(".result-message").html(resultMessege);
         for (let i = 0; i < maxPredictions; i++) {
@@ -390,6 +401,41 @@
           labelContainer.childNodes[i].innerHTML = classPrediction;
         }
       }
+    </script>
+    <script>
+      // 상단 광고 js
+      const adUpper = document.querySelector(".ad__upper");
+      const adUpperBtn = document.querySelector(".ad__upper__hide__btn");
+
+      function handleAdUpper() {
+        if (adUpper.classList[2] === undefined) {
+          adUpper.classList.add("snackbar__anim__up");
+        } else if (adUpper.classList[2] === "snackbar__anim__up") {
+          adUpper.classList.remove("snackbar__anim__up");
+        }
+      }
+      if (adUpper) {
+        adUpperBtn.addEventListener("click", handleAdUpper);
+        setTimeout(function () {
+          adUpper.classList.add("snackbar__anim__result");
+        }, 1000);
+      }
+      function iosApp() {
+        document.getElementById("addThis").style.display = "none";
+        document.getElementById("disqus_thread").style.display = "none";
+        var kakao = document.getElementsByClassName("kakao_ad_area");
+        for (var i = 0; i < kakao.length; i++) {
+          if (kakao[i]) {
+            kakao[i].style.display = "none";
+          }
+        }
+        document.getElementById("yotube-top-link").style.display = "none";
+        document.getElementById("yotube-mid-link").style.display = "none";
+        document.getElementById("yotube-bottom-link").remove();
+        document.getElementById("moreInfo").remove();
+        document.getElementById("goToBlog").remove();
+      }
+      $("#appModal").modal();
     </script>
   </body>
   <!-- Copyright (c) 2020 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
