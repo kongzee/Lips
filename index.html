@@ -52,16 +52,20 @@
       name="keywords"
       content="입술 테스트, 인공지능 입술 테스트, 입술모양, 입술 테스트, 입술, 입술 모양, 입술로 보는 심리, 입술 심리, 입술라인, Lipline, 입꼬리, 처진입꼬리, 하트입술, 앵두입술, 두툼한입술, 얇은입술, 입꼬리UP, 인공지능 심리테스트, AI 입술, AI 입술모양"
     />
+    <meta name="author" content="AITest" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="" href="" />
-    <meta property="og:url" content="" />
+    <link rel="canonical" href="https://ai-psytest.tk" />
+    <meta property="og:url" content="https://ai-psytest.tk" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="입술 테스트" />
     <meta
       property="og:description"
       content="입술 모양으로 알아보는 인공지능 성격 심리테스트, 입술 모양으로 나의 성격유형을 찾아보세요 ! 수만 개의 입술 사진 데이터로 학습한 인공지능이 당신의 성격 유형을 찾아드립니다.! 회원가입도 필요없이 화면에서 바로 확인해보세요! 사진 데이터는 그 어디에도 전송되지 않습니다. 인공지능이 보는 나의 입술모양 테스트 한번 해보세요! 처진 입꼬리? 올라간 입꼬리? 두툼한 입술? ? 동그란 입술모양? 얇은 입술? 산이뾰족한 입술모양? 입술모양 테스트를 통해 나의 성격 유형을 알 수 있습니다."
     />
-    <meta property="og:image" content="" />
+    <meta
+      property="og:image"
+      content="https://live.lge.co.kr/wp-content/uploads/2020/06/AI%EC%9A%A9%EC%96%B4%EC%82%AC%EC%A0%84_00.jpg"
+    />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
   </head>
@@ -76,6 +80,20 @@
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
+    <div class="ad-topbanner">
+      <ins
+        class="kakao_ad_area"
+        style="display: none"
+        data-ad-unit="DAN-zoCRYTdM1xNdoQzU"
+        data-ad-width="728"
+        data-ad-height="90"
+      ></ins>
+      <script
+        type="text/javascript"
+        src="//t1.daumcdn.net/kas/static/ba.min.js"
+        async
+      ></script>
+    </div>
     <nav class="navbar navbar-expand-lg navbar-light nav-margin">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">입술 테스트</a>
@@ -114,6 +132,54 @@
         </div>
       </div>
     </nav>
+    <section
+      class="container d-flex flex-column justify-content-center align-items-center"
+    >
+      <span class="select-language">Language</span>
+      <select onchange="changeLanguage(this)" class="custom-select col-8">
+        <option value="ko" lang="ko">한국어</option>
+        <option value="en" lang="en">English</option>
+        <option value="es" lang="es">español</option>
+        <option value="ja" lang="ja">日本語</option>
+        <option value="zh" lang="zh">中文</option>
+        <option value="vi" lang="vi">tiếng Việt</option>
+        <option value="id" lang="id">Bahasa Indonesia</option>
+        <option value="it" lang="it">Italiano</option>
+        <option value="th" lang="th">ไทย</option>
+      </select>
+    </section>
+    <script>
+      let ua = navigator.userAgent.toLowerCase();
+      function changeLanguage(lang) {
+        if (
+          (navigator.userAgent.indexOf("Mac OS") > 0 &&
+            navigator.userAgent.indexOf("Safari") <= 0) ||
+          (navigator.userAgent.indexOf("Android") > 0 &&
+            navigator.userAgent.indexOf("wv)") > 0)
+        ) {
+          if (ua.match("android") != null) {
+            window.open(
+              "googlechrome://navigate?url=ai-psytest.tk/" +
+                lang.value +
+                "/index.html"
+            ); //android
+          } else if (
+            ua.indexOf("iphone") > -1 ||
+            ua.indexOf("ipad") > -1 ||
+            ua.indexOf("ipod") > -1
+          ) {
+            window.location.href =
+              "https://ai-psytest.tk/" + lang.value + "/index.html";
+          } else {
+            window.location.href =
+              "https://ai-psytest.tk/" + lang.value + "/index.html";
+          }
+        } else {
+          window.location.href =
+            "https://ai-psytest.tk/" + lang.value + "/index.html";
+        }
+      }
+    </script>
     <div class="main-title">
       <h1 class="title">인공지능 입술 테스트</h1>
       <h2 class="subtitle">나의 입술 모양으로 알아 보는 성격 유형 테스트!</h2>
@@ -138,7 +204,10 @@
         테스트를 통해 나의 성격 유형을 알 수 있습니다.
       </p>
     </div>
-    <div class=""></div>
+    <script
+      class="jsbin"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
+    ></script>
     <div class="file-upload container">
       <div class="image-upload-wrap">
         <input
@@ -174,30 +243,24 @@
         ></div>
 
         <div class="image-title-wrap">
-          <button type="button" onclick="removeUpload()" class="remove-image">
-            <span class="image-title">다른 사진으로 재시도!</span>
+          <button
+            type="button p-2"
+            class="try-again-btn"
+            onclick="gaReload1();"
+            data-toggle="modal"
+            data-target="#adModal"
+          >
+            <span class="try-again-text">다른 사진으로 재시도!</span>
           </button>
         </div>
       </div>
     </div>
 
-    <div id="webcam-container"></div>
-
-    <script
-      class="jsbin"
-      src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
-    ></script>
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
       crossorigin="anonymous"
     ></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
       integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
@@ -208,9 +271,29 @@
       integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
       crossorigin="anonymous"
     ></script>
-
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <div class="ad-kakaobanner">
+      <ins
+        class="kakao_ad_area"
+        style="display: none"
+        data-ad-unit="DAN-xXUoIMkhYWClCZ1L"
+        data-ad-width="320"
+        data-ad-height="100"
+      ></ins>
+      <script
+        type="text/javascript"
+        src="//t1.daumcdn.net/kas/static/ba.min.js"
+        async
+      ></script>
+    </div>
+
+    <footer class="footer pt-5 container d-flex justify-content-center">
+      <div>
+        <p>&copy; Hatez 2020.12.31 All Rights Reserved.</p>
+      </div>
+    </footer>
+
     <script>
       function readURL(input) {
         if (input.files && input.files[0]) {
@@ -218,16 +301,15 @@
 
           reader.onload = function (e) {
             $(".image-upload-wrap").hide();
-
+            $("#loading").show();
             $(".file-upload-image").attr("src", e.target.result);
             $(".file-upload-content").show();
-
             $(".image-title").html(input.files[0].name);
           };
-
           reader.readAsDataURL(input.files[0]);
           init().then(() => {
             predict();
+            $("#loading").hide();
           });
         } else {
           removeUpload();
@@ -247,15 +329,8 @@
       });
     </script>
     <script type="text/javascript">
-      // More API functions here:
-      // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
-
-      // the link to your model provided by Teachable Machine export panel
       const URL = "https://teachablemachine.withgoogle.com/models/utspOy_3A/";
-
       let model, webcam, labelContainer, maxPredictions;
-
-      // Load the image model and setup the webcam
       async function init() {
         const modelURL = URL + "model.json";
         const metadataURL = URL + "metadata.json";
@@ -266,9 +341,6 @@
         // Note: the pose library adds "tmImage" object to your window (window.tmImage)
         model = await tmImage.load(modelURL, metadataURL);
         maxPredictions = model.getTotalClasses();
-
-        // append elements to the DOM
-
         labelContainer = document.getElementById("label-container");
         for (let i = 0; i < maxPredictions; i++) {
           // and class labels
@@ -283,25 +355,31 @@
         prediction.sort(
           (a, b) => parseFloat(b.probability) - parseFloat(a.probability)
         );
-        let resultMessege;
+        let resultTitle, resultExplain;
         switch (prediction[0].className) {
           case "up":
-            resultMessege = "입꼬리UP";
+            resultTitle = "입꼬리UP";
+            resultExplain = "설명";
             break;
           case "down":
-            resultMessege = "입꼬리DOWN";
+            resultTitle = "입꼬리DOWN";
+            resultExplain = "설명";
             break;
           case "mm":
-            resultMessege = "두툼한입술";
+            resultTitle = "두툼한입술";
+            resultExplain = "설명";
             break;
           case "kk":
-            resultMessege = "산이뾰족한";
+            resultTitle = "산이뾰족한";
+            resultExplain = "설명";
             break;
           case "circle":
-            resultMessege = "동그란입술";
+            resultTitle = "동그란입술";
+            resultExplain = "설명";
             break;
           default:
-            resultMessege = "알수없음";
+            resultTitle = "알수없음";
+            resultExplain = "설명";
         }
         $(".result-message").html(resultMessege);
         for (let i = 0; i < maxPredictions; i++) {
