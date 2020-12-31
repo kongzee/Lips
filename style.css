@@ -3,7 +3,7 @@
 body {
   color: #35465d;
   font-family: "Passion One", cursive;
-  background-color: #ffffff;
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 }
 
 .file-upload {
@@ -11,7 +11,7 @@ body {
   margin: 0 auto;
   border-radius: 15px;
   background-color: white;
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 7px rgba(50, 50, 93, 0.11), 0 1px 7px rgba(0, 0, 0, 0.08);
   cursor: pointer;
 }
 .file-upload-btn {
@@ -141,8 +141,10 @@ body {
 
 .title {
   font-family: "Passion One", cursive;
-  line-height: 1.67;
+  line-height: 1.97;
   text-align: center;
+  text-shadow: 2px 2px 5px black;
+  color:white;
   margin-bottom: 15px;
 }
 .subtitle {
@@ -386,4 +388,22 @@ body {
 .ad-kakaobanner {
   width:320px;
   margin:0 auto;
+}
+
+
+.memo-update {  
+  display: flex;  
+  margin: 0 auto;
+  height:320px;
+  width: 320px;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  
+  
+}
+.memo-text {
+  
+  text-align: center;
+  padding:10px;
 }
