@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Passion+One&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 body {
-  font-family: sans-serif;
+  color: #35465d;
+  font-family: "Passion One", cursive;
   background-color: #ffffff;
 }
 
@@ -57,7 +58,7 @@ body {
 }
 
 .image-upload-wrap {
-  width: 60%;
+  width: 65%;
   margin: 0 auto;
   position: relative;
   object-fit: contain;
@@ -87,11 +88,10 @@ body {
 }
 .upload-text {
   font-family: "Passion One", cursive;
-  width: 50%;
+  width: 60%;  
   color: rgb(177, 167, 167, 0.8);
   font-size: 1.5rem;
   line-height: 1.53;
-
   margin: 0 auto;
   text-align: center;
 }
@@ -169,6 +169,162 @@ body {
   width: 20%;
   opacity: 0.3;
   margin: 10px;
+}
+
+.footer {
+  background-color: initial;
+  color: initial;
+}
+
+.bar-container {
+  height: 2.7rem;
+}
+.mm-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(117, 204, 84, 0.2);
+}
+.mm-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(117, 204, 84, 1);
+}
+.kk-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(117, 204, 84, 0.2);
+}
+.kk-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(33, 156, 115, 0.192);
+}
+.circle-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(27, 175, 234, 0.2);
+}
+.circle-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(27, 175, 234, 1);
+}
+.down-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(251, 176, 59, 0.2);
+}
+.down-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(251, 176, 59, 1);
+}
+.up-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  background-color: rgba(195, 140, 102, 0.2);
+}
+.up-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2rem;
+  border-radius: 10px;
+  background-color: rgba(195, 140, 102, 1);
+}
+
+.percent-text {
+  
+  font-size: 1rem;
+  color: #ffffff;
+}
+.lips-label {
+  
+
+  text-align: left;
+  
+  height: 2rem;
+}
+#label-container {
+  font-family: 'Noto Sans KR', sans-serif;
+ 
+  width: 50%;
+  margin: 0 auto;
+}
+.result-message {
+  
+  font-size: 2rem;
+}
+
+.lips-explain {
+  font-size: 1.5rem;
+}
+.kk-lips-title {
+  color: #ffb142;
+}
+.kk-lips-ps {
+  color: #ffb142;
+  font-size: 1.2rem;
+}
+.up-lips-title {
+  color: #3ba363;
+}
+.up-lips-ps {
+  color: #3ba363;
+  font-size: 1.2rem;
+}
+.down-lips-title {
+  color: #ff6c0a;
+}
+.down-lips-ps {
+  color: #ff6c0a;
+  font-size: 1.2rem;
+}
+.circle-lips-title {
+  color: #548dd4;
+}
+.circle-lips-ps {
+  color: #548dd4;
+  font-size: 1.2rem;
+}
+.mm-lips-title {
+  color: #e56995;
+}
+.mm-lips-ps {
+  color: #e56995;
+  font-size: 1.2rem;
 }
 
 /* 상단 광고 */
