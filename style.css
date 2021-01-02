@@ -385,9 +385,9 @@ body {
 
 
 
-.ad-kakaobanner .ad__upper {
-  width:320px;
-  margin:0 auto;
+.ad-kakaobanner {
+  max-width:320px;
+  
 }
 
 
