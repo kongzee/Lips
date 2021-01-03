@@ -158,9 +158,12 @@ body {
   html {
     font-size: 10px;
   }
-  .navbar-brand {
+  
+  
+   .navbar-brand {
     font-size: 2rem;
   }
+
 }
 
 .navbar-brand {
@@ -390,12 +393,16 @@ body {
   margin: 0 auto;
 }
 
-
-.memo-update {  
+#memobord {
   display: flex;  
+  flex-wrap:wrap;
   margin: 0 auto;
+  width:320px;
+  
+}
+
+.memo-update {    
   height:320px;
-  width: 320px;
   background-color: white;
   border-radius: 30px;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
@@ -403,7 +410,10 @@ body {
   
 }
 .memo-text {
-  
   text-align: center;
   padding:10px;
+}
+@media (max-width: 600px) {
+  
+  .memo-update {height:150px;}
 }

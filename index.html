@@ -138,36 +138,7 @@
         <option value="it" lang="it">Italiano</option>
         <option value="th" lang="th">ไทย</option>
       </select>
-    </section>
-    <script>
-      var ua = navigator.userAgent.toLowerCase();
-      function changeLanguage(lang) {
-        if (
-          (navigator.userAgent.indexOf("Mac OS") > 0 &&
-            navigator.userAgent.indexOf("Safari") <= 0) ||
-          (navigator.userAgent.indexOf("Android") > 0 &&
-            navigator.userAgent.indexOf("wv)") > 0)
-        ) {
-          if (ua.match("android") != null) {
-            window.open(
-              "googlechrome://navigate?url=ai-psytest.tk/"+lang.value+"/index.html"); //android
-          } else if (
-            ua.indexOf("iphone") > -1 ||
-            ua.indexOf("ipad") > -1 ||
-            ua.indexOf("ipod") > -1
-          ) {
-            window.location.href =
-              "https://ai-psytest.tk/"+lang.value+"/index.html";
-          } else {
-            window.location.href =
-              "https://ai-psytest.tk/"+lang.value+"/index.html";
-          }
-        } else {
-          window.location.href =
-            "https://ai-psytest.tk/"+lang.value+"/index.html";
-        }
-      }
-    </script>
+    </section>    
     <div class="main-title">
       <h1 class="title">2021년 AI 입술 심리테스트</h1>
       <h2 class="subtitle">
@@ -220,18 +191,20 @@
       </div>
     </div>
     <h4 class="mt-1 text-center">*사진은 절대 어디에도 저장되지 않습니다*</h4>
-    <div class="memo-update">
-      <p class="memo-text">
-        먼저 서비스를 이용해 주셔서 대단히 감사합니다.
-        AI기술로 구현된 심리 테스트 입니다.
-        주기적으로 업데이트 및 추가 기능을 넣을 예정입니다.
-        재밋게 이용하셨다면 지인 및 가족분들에게 공유 부탁 드립니다!
-        나의 입술 모양으로 본 성격 유형은 무엇인지
-        AI가 알려주는 2021년 심리 테스트 입니다
-        새해에는 코로나가 없는 세상이 왔으면 좋겠습니다.
-        항상 몸 조심 하시고 항상 행복하며 그런 2021년 해가 되길 간절히 소망합니다.
-        새해 복 많이 받으세요   
-      </p>
+    <div id="memobord">
+      <div class="memo-update">
+        <p class="memo-text">
+          먼저 서비스를 이용해 주셔서 대단히 감사합니다.
+          AI기술로 구현된 심리 테스트 입니다.
+          주기적으로 업데이트 및 추가 기능을 넣을 예정입니다.
+          재밋게 이용하셨다면 지인 및 가족분들에게 공유 부탁 드립니다!
+          나의 입술 모양으로 본 성격 유형은 무엇인지
+          AI가 알려주는 2021년 심리 테스트 입니다
+          새해에는 코로나가 없는 세상이 왔으면 좋겠습니다.
+          항상 몸 조심 하시고 항상 행복하며 그런 2021년 해가 되길 간절히 소망합니다.
+          새해 복 많이 받으세요   
+        </p>
+      </div>
     </div>
 
     <script
@@ -249,6 +222,35 @@
       integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
       crossorigin="anonymous"
     ></script>
+    <script>
+      var ua = navigator.userAgent.toLowerCase();
+      function changeLanguage(lang) {
+        if (
+          (navigator.userAgent.indexOf("Mac OS") > 0 &&
+            navigator.userAgent.indexOf("Safari") <= 0) ||
+          (navigator.userAgent.indexOf("Android") > 0 &&
+            navigator.userAgent.indexOf("wv)") > 0)
+        ) {
+          if (ua.match("android") != null) {
+            window.open(
+              "googlechrome://navigate?url=ai-psytest.tk/"+lang.value+"/index.html"); //android
+          } else if (
+            ua.indexOf("iphone") > -1 ||
+            ua.indexOf("ipad") > -1 ||
+            ua.indexOf("ipod") > -1
+          ) {
+            window.location.href =
+              "https://ai-psytest.tk/"+lang.value+"/index.html";
+          } else {
+            window.location.href =
+              "https://ai-psytest.tk/"+lang.value+"/index.html";
+          }
+        } else {
+          window.location.href =
+            "https://ai-psytest.tk/"+lang.value+"/index.html";
+        }
+      }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
     <div class="ad-kakaobanner">
