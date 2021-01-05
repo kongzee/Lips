@@ -416,3 +416,7 @@ body {
 .container-fluid {
     text-align: center;
 }
+
+.kakao_ad_area {
+    position: fixed;
+}
