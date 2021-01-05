@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 body {
-    height: 100vh;
     color: #35465d;
     font-family: 'Passion One', cursive;
     background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
